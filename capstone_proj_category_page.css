@@ -1,0 +1,144 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    /* border: 1px solid black; */
+    background-color: #232323;
+    display: flex;
+    width: auto;
+    height: 100%;
+    padding: 30px;
+}
+
+.left-inner-container {
+    /* border: 1px solid black; */
+    background-color: #fff;
+    display: flex;
+    width: 300px;
+    height: 730px;
+    border-radius: 5px;
+}
+
+.left-sidebar {
+    /* border: 1px solid black; */
+    display: flex;
+    margin: 50px;
+    width: 100%;
+    height: 500px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.left-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-sidebar nav label {
+    display: block;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    color: #232323;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.left-sidebar nav .slider {
+    position: absolute;
+    height: 50px;
+    width: 13.7%;
+    background: #232323;
+    border-radius: 5px;
+    z-index: 0;
+    top: 80px;
+    left: 20;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+
+#merch:checked ~ nav .slider {
+    top: 18.2%;
+}
+
+#oh-col:checked ~ nav .slider {
+    top: 26.3%;
+}
+
+#new-arr:checked ~ nav .slider {
+    top: 34.4%;
+}
+
+#lim-edi:checked ~ nav .slider {
+    top: 42.4%;
+}
+
+#spec-edi:checked ~ nav .slider {
+    top: 50.6%;
+}
+
+#osprm:checked ~ nav .slider {
+    top: 58.7%;
+}
+
+#auc:checked ~ nav .slider {
+    top: 66.8%;
+}
+
+#act-fig.checked ~ nav label.act-fig,
+#merch:checked ~ nav label.merch,
+#oh-col:checked ~ nav label.oh-col,
+#new-arr:checked ~ nav label.new-arr,
+#lim-edi:checked ~ nav label.lim-edi,
+#spec-edi:checked ~ nav label.spec-edi,
+#osprm:checked ~ nav label.osprm,
+#auc:checked ~ nav label.auc {
+    color: #fff;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+/* .right-inner-container {
+    border: 1px solid black;
+    background-color: #fff;
+    width: 1050px;
+    height: 730px;
+    margin-left: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .left-inner-container .content {
+    display: none;
+} */
+
+#act-fig:checked ~ .left-inner-container .content-1,
+#merch:checked ~ .left-inner-container .content-2, 
+#oh-col:checked ~ .left-inner-container .content-3,
+#new-arr:checked ~ .left-inner-container .content-4,
+#lim-edi:checked ~ .left-inner-container .content-5,
+#spec-edi:checked ~ .left-inner-container .content-6,
+#osprm:checked ~ .left-inner-container .content-7,
+#auc:checked ~ .left-inner-container .content-8 {
+    display: block;
+}
+
+.left-inner-container .content  .title{
+    font-size: 21px;
+    font-weight: 500;
+    margin: 30px 0 10px 15px;
+}
+
+.left-inner-container .content  p{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px;
+}
